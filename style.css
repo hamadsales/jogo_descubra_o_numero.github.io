@@ -13,10 +13,11 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    /* Imagem de fundo temática do cenário do Mario */
-    background: url('nintendo.com') no-repeat center center fixed;
+    /* Caminho para a imagem que você salvou na pasta */
+    background: url('mario-bg.png') no-repeat center center fixed;
     background-size: cover;
 }
+
 
 .game-container {
     background-color: rgba(0, 0, 0, 0.75);
@@ -26,7 +27,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 25px;
+    gap: 25px;/*define o espaçamento interno entre os elementos de um container Flexbox ou Grid.*/
     box-shadow: 0px 0px 20px #fbd214; /* Brilho Amarelo Moeda */
     width: 90%;
     max-width: 500px;
