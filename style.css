@@ -1,0 +1,92 @@
+@import url('googleapis.com');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Press Start 2P', cursive;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Imagem de fundo temática do cenário do Mario */
+    background: url('nintendo.com') no-repeat center center fixed;
+    background-size: cover;
+}
+
+.game-container {
+    background-color: rgba(0, 0, 0, 0.75);
+    border: 4px solid #e52521; /* Vermelho Mario */
+    border-radius: 20px;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+    box-shadow: 0px 0px 20px #fbd214; /* Brilho Amarelo Moeda */
+    width: 90%;
+    max-width: 500px;
+}
+
+input[type="number"] {
+    width: 100%;
+    height: 70px;
+    font-size: 2rem;
+    text-align: center;
+    border: 4px solid #fbd214;
+    border-radius: 12px;
+    outline: none;
+    color: #333;
+    /* Fundo do input usa o bloco de interrogação clássico */
+    background: #fff url('nintendo.com') no-repeat 15px center;
+    padding-left: 50px;
+}
+
+.button-group {
+    display: flex;
+    gap: 20px;
+    width: 100%;
+}
+
+button {
+    flex: 1;
+    height: 65px;
+    font-size: 0.8rem;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    color: white;
+    text-shadow: 2px 2px 0px #000;
+    transition: transform 0.1s, filter 0.2s;
+    box-shadow: 0px 5px 0px rgba(0,0,0,0.4);
+}
+
+#btn-chutar {
+    background-color: #00a2ed; /* Azul clássico */
+    border-bottom: 5px solid #00669e;
+}
+
+#btn-novo {
+    background-color: #43b047; /* Verde Luigi */
+    border-bottom: 5px solid #246326;
+}
+
+button:hover:not(:disabled) {
+    filter: brightness(1.1);
+}
+
+button:active:not(:disabled) {
+    transform: translateY(4px);
+    box-shadow: 0px 1px 0px rgba(0,0,0,0.4);
+}
+
+button:disabled {
+    background-color: #7c7c7c;
+    border-bottom: 5px solid #4a4a4a;
+    cursor: not-allowed;
+    opacity: 0.6;
+}
