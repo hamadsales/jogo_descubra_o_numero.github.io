@@ -7,13 +7,28 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="game-container">
+    <div id="tela-inicial">
+        <div class="game-container">
         <img src="header.png">
         <div class="button-group">
-            <button id="btn-chutar" onclick="easy()"><a href="main.html">Fácil</a></button>
-            <button id="btn-novo" onclick="normal()"><a href="main.html">Médio</a></button>
-            <button id="btn-chutar" onclick="hard()"><a href="main.html">Difícil</a></button>
+            <button id="btn-chutar" onclick="easy()">Fácil</button>
+            <button id="btn-novo" onclick="normal()">Médio</button>
+            <button id="btn-chutar" onclick="hard()">Difícil</button>
         </div>
+    </div>
+    </div>
+    <div id="tela-jogo" style="display: none;"> <!--esconde o display--> 
+        <div class="game-container">
+        <img src="header.png">
+        <!-- Input para digitar o número -->
+        <input type="number" id="chute" placeholder="?">
+
+        <!-- Área dos botões de ação -->
+        <div class="button-group">
+            <button id="btn-chutar" onclick="verificarChute()">Chutar</button>
+            <button id="btn-novo" onclick="reiniciarJogo()" disabled>Novo jogo</button>
+        </div>
+    </div>
     </div>
 
     <script src="app.js"></script>
