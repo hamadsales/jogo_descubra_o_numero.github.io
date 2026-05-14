@@ -1,36 +1,41 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Super Mario - Acerte o Número</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
+    <!--Utilizando Single Page Application (SPA)-->
     <div id="tela-inicial">
         <div class="game-container">
-        <img src="header.png">
-        <div class="button-group">
-            <button id="btn-chutar" onclick="easy()">Fácil</button>
-            <button id="btn-novo" onclick="normal()">Médio</button>
-            <button id="btn-chutar" onclick="hard()">Difícil</button>
+            <img src="header.png">
+            <div class="button-group">
+                <button id="btn-chutar" onclick="easy()">Fácil</button>
+                <button id="btn-novo" onclick="normal()">Médio</button>
+                <button id="btn-chutar" onclick="hard()">Difícil</button>
+            </div>
         </div>
     </div>
-    </div>
-    <div id="tela-jogo" style="display: none;"> <!--esconde o display--> 
+    <div id="tela-jogo" style="display: none;"> <!--esconde o display-->
         <div class="game-container">
-        <img src="header.png">
-        <!-- Input para digitar o número -->
-        <input type="number" id="chute" placeholder="?">
+            <img src="header.png">
+            <!-- Input para digitar o número -->
+            <input type="number" id="chute" placeholder="?">
 
-        <!-- Área dos botões de ação -->
-        <div class="button-group">
-            <button id="btn-chutar" onclick="verificarChute()">Chutar</button>
-            <button id="btn-novo" onclick="reiniciarJogo()" disabled>Novo jogo</button>
+            <!-- Área dos botões de ação -->
+            <div class="button-group">
+                <button id="btn-chutar" onclick="verificarChute()">Chutar</button>
+                <button id="btn-novo" onclick="reiniciarJogo()" disabled>Novo jogo</button>
+            </div>
         </div>
     </div>
-    </div>
+    <img id="win" style = 'display: none;'></img>
 
     <script src="app.js"></script>
 </body>
+
 </html>

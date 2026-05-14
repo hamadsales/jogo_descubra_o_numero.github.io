@@ -92,3 +92,8 @@ button:disabled {
     cursor: not-allowed;
     opacity: 0.6;
 }
+img#win{
+    width: 20%;
+    height: 30%;
+    border-radius: 20px;
+}
