@@ -12,7 +12,7 @@
     <!--Utilizando Single Page Application (SPA)-->
     <div id="tela-inicial">
         <div class="game-container">
-            <img src="header.png">
+            <img id="header" src="header.png">
             <div class="button-group">
                 <button id="btn-chutar" onclick="easy()">Fácil</button>
                 <button id="btn-novo" onclick="normal()">Médio</button>
@@ -23,18 +23,17 @@
     <div id="tela-jogo" style="display: none;"> <!--esconde o display-->
         <div class="game-container">
             <img src="header.png">
+            <img id="win" style = 'display: none;'></img>
             <!-- Input para digitar o número -->
             <input type="number" id="chute" placeholder="?">
 
             <!-- Área dos botões de ação -->
             <div class="button-group">
                 <button id="btn-chutar" onclick="verificarChute()">Chutar</button>
-                <button id="btn-novo" onclick="reiniciarJogo()" disabled>Novo jogo</button>
+                <button id="btn-novo" onclick="reiniciarJogo()" >Novo jogo</button>
             </div>
         </div>
     </div>
-    <img id="win" style = 'display: none;'></img>
-
     <script src="app.js"></script>
 </body>
 

@@ -76,6 +76,10 @@ button,a{
     background-color: #43b047; /* Verde Luigi */
     border-bottom: 5px solid #246326;
 }
+#btn-jogar {
+    background-color: #43b047; /* Verde Luigi */
+    border-bottom: 5px solid #246326;
+}
 
 button:hover:not(:disabled) {
     filter: brightness(1.1);
@@ -93,7 +97,7 @@ button:disabled {
     opacity: 0.6;
 }
 img#win{
-    width: 20%;
-    height: 30%;
+    width: 100%;
+    height: 100%;
     border-radius: 20px;
 }
