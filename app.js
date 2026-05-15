@@ -64,6 +64,7 @@ function reiniciarJogo(){
     botao_inicial.style.display = ''
     win.style.display = 'none'
     tela_jogo.style.display = 'none'
+    header_inicio.style.display = ''
     tela_inicial.style.display = ''
     header_jogo.style.display = ''
     entrada.style.display = ''
