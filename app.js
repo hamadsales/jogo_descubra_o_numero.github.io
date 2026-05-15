@@ -14,7 +14,7 @@ var p = document.querySelector('p')
 
 function easy() {
     //window.location.href = 'main.html'        // Muda de página
-    numero = 5//Math.floor(Math.random() * 10)
+    numero = Math.floor(Math.random() * 10)
     tela_inicial.style.display = 'none' //esconde o elemento na tela
     mostrar_tela()
 }
