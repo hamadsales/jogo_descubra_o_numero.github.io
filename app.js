@@ -63,7 +63,8 @@ function reiniciarJogo(){
     botao_recomeco.disabled = true
     botao_inicial.style.display = ''
     win.style.display = 'none'
-    tela_jogo.style.display = ''
+    tela_jogo.style.display = 'none'
+    tela_inicial.style.display = ''
     header_jogo.style.display = ''
     entrada.style.display = ''
 
