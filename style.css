@@ -67,18 +67,22 @@ button,a{
     box-shadow: 0px 5px 0px rgba(0,0,0,0.4);
 }
 
-#btn-chutar {
+#btn-chutar, #btn-facil{
     background-color: #00a2ed; /* Azul clássico */
     border-bottom: 5px solid #00669e;
 }
 
-#btn-novo {
+#btn-novo , #btn-medio{
     background-color: #43b047; /* Verde Luigi */
     border-bottom: 5px solid #246326;
 }
 #btn-jogar {
     background-color: #43b047; /* Verde Luigi */
     border-bottom: 5px solid #246326;
+}
+#btn-dificil{
+    background-color: #b13e1e; /* Verde Luigi */
+    border-bottom: 5px solid #891706;
 }
 
 button:hover:not(:disabled) {
