@@ -19,12 +19,12 @@ function easy() {
     mostrar_tela()
 }
 function normal() {
-    numero = Math.floor(Math.random() * 100)
+    numero = Math.floor(Math.random() * 20)
     tela_inicial.style.display = 'none'
     mostrar_tela()
 }
 function hard() {
-    numero = Math.floor(Math.random() * 1000)
+    numero = Math.floor(Math.random() * 50)
     tela_inicial.style.display = 'none'
     mostrar_tela()
 }
