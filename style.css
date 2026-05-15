@@ -105,3 +105,33 @@ img#win{
     height: 100%;
     border-radius: 20px;
 }
+
+/* Media Query para Celulares */
+@media (max-width: 480px) {
+    .game-container {
+        padding: 20px; /* Reduz o preenchimento interno para ganhar espaço */
+        width: 95%;    /* Ocupa quase toda a largura da tela */
+        gap: 15px;     /* Diminui o espaço entre os elementos */
+    }
+
+    .button-group {
+        flex-direction: column; /* Empilha os botões verticalmente em vez de lado a lado */
+        gap: 10px;
+    }
+
+    button {
+        height: 55px;   /* Botões um pouco menores para não ocupar a tela toda */
+        font-size: 0.7rem; 
+    }
+
+    input[type="number"] {
+        height: 60px;
+        font-size: 1.5rem;
+        padding-left: 40px; /* Ajusta o ícone interno se necessário */
+    }
+
+    img#header, img#header-jogo {
+        width: 100%;    /* Garante que o logo não ultrapasse o container */
+        height: auto;
+    }
+}
