@@ -1,42 +1,52 @@
-var tela_inicial = document.querySelector('div#tela-inicial')
-var tela_jogo = document.querySelector('div#tela-jogo')
+const variaveis = {} //cria um objeto que não muda, mas as propriedades dele podem mudar.
 var numero;
-var win = document.querySelector('img#win')
-var header_jogo = document.querySelector('img#header-jogo')
-var header_inicio = document.querySelector('img#header-inicio')
-var botao_inicial = document.querySelector('button#btn-chutar')
-var botao_recomeco = document.querySelector('button#btn-novo')
-var entrada = document.querySelector('input#chute')
 var tentativas = 0;
-var p = document.querySelector('p')
 
+function criarvar(nome,tag,id){
+    variaveis[nome] = document.querySelector(`${tag}#${id}`)
+}
+
+criarvar('tela_inicial','div','tela-inicial');
+criarvar('tela_jogo','div','tela-jogo')
+criarvar('win','img','win')
+criarvar('header_jogo','img','header-jogo')
+criarvar('header_inicio','img','header-inicio')
+criarvar('botao_inicial','button','btn-chutar')
+criarvar('botao_recomeco','button','btn-novo')
+criarvar('entrada','input','chute')
+criarvar('p','p','paragrafo')
+
+//Podemos depois criar uma função exibirPaginaInicial() e exibirJogo() para melhorar o código
+//adicionar as dicas se o numero do chute é maior ou menor que o numero indicado
+//adicionar setAtributte no disabled
 
 
 function easy() {
     //window.location.href = 'main.html'        // Muda de página
     numero = Math.floor(Math.random() * 10)
-    tela_inicial.style.display = 'none' //esconde o elemento na tela
+    variaveis.tela_inicial.style.display = 'none' //esconde o elemento na tela
     mostrar_tela()
 }
 function normal() {
     numero = Math.floor(Math.random() * 20)
-    tela_inicial.style.display = 'none'
+    variaveis.tela_inicial.style.display = 'none'
     mostrar_tela()
 }
 function hard() {
     numero = Math.floor(Math.random() * 50)
-    tela_inicial.style.display = 'none'
+    variaveis.tela_inicial.style.display = 'none'
     mostrar_tela()
 }
 
 function mostrar_tela(){
-    tela_jogo.style.display = '' //faz o elemento aparecer na tela
+    variaveis.tela_jogo.style.display = '' //faz o elemento aparecer na tela
 }
 
 function verificarChute(){
+    let paravraTentativa = tentativas == 0 ? 'tentativa' : 'tentativas' //operador ternário no JS
     
     if(tentativas == 0){
-        botao_recomeco.disabled = false
+        variaveis.botao_recomeco.disabled = false
         tentativas++
     }else{
         tentativas++
@@ -44,31 +54,31 @@ function verificarChute(){
     
     let chute = Number(document.querySelector('input#chute').value)
     if(chute == numero){
-        botao_inicial.style.display = 'none'
-        botao_recomeco.disabled = false //disabled é false ou true
-        win.style.display = ''
-        entrada.style.display = 'none'
-        win.src = 'win.jpg'
-        header_inicio.style.display = 'none'
-        header_jogo.style.display = 'none'
-        p.innerHTML = `Você ganhou com ${tentativas} tentativas`
+        variaveis.botao_inicial.style.display = 'none'
+        variaveis.botao_recomeco.disabled = false //disabled é false ou true
+        variaveis.win.style.display = ''
+        variaveis.entrada.style.display = 'none'
+        variaveis.win.src = 'win.jpg'
+        variaveis.header_inicio.style.display = 'none'
+        variaveis.header_jogo.style.display = 'none'
+        variaveis.p.innerHTML = `Você ganhou com ${tentativas} ${paravraTentativa}`
     }else{
-        entrada.value = ''
-        p.innerHTML = `Tentativa número ${tentativas}`
+        variaveis.entrada.value = ''
+        variaveis.p.innerHTML = `Tentativa número ${tentativas}`
     }
 }
 
 function reiniciarJogo(){
     tentativas = 0
-    botao_recomeco.disabled = true
-    botao_inicial.style.display = ''
-    win.style.display = 'none'
-    tela_jogo.style.display = 'none'
-    header_inicio.style.display = ''
-    tela_inicial.style.display = ''
-    header_jogo.style.display = ''
-    entrada.style.display = ''
+    variaveis.botao_recomeco.disabled = true
+    variaveis.botao_inicial.style.display = ''
+    variaveis.win.style.display = 'none'
+    variaveis.tela_jogo.style.display = 'none'
+    variaveis.header_inicio.style.display = ''
+    variaveis.tela_inicial.style.display = ''
+    variaveis.header_jogo.style.display = ''
+    variaveis.entrada.style.display = ''
 
-    entrada.value = ''
-    p.innerHTML = `Tentativa número ${tentativas}`
+    variaveis.entrada.value = ''
+    variaveis.p.innerHTML = `Tentativa número ${tentativas}`
 }
